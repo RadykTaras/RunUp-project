@@ -1,0 +1,26 @@
+.aside{
+  min-height: 100%;
+  background-image: url("./img/common/aside_background.jpg");
+  background-size: 100%;
+  width: 20rem;
+}
+
+.card{
+  width: 18rem;
+  margin: 20px auto;
+}
+
+.brand_Img{
+  height: 200px;
+}
+
+.brand_logo{
+  height: 40px;
+  margin-right: 10px;
+}
+
+.brand_button{
+  background-color: #212529 !important;
+  border: 0px !important;
+}
+

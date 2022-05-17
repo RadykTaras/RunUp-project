@@ -1,0 +1,18 @@
+.mainSection{
+  display: flex;
+  background-color: rgb(241, 241, 241);
+}
+
+.body{
+  min-height: 100vh;
+}
+
+.shopCartImg{
+  height: 36px;
+  position: relative;
+  left: 100px;
+}
+
+.shopCartImg:hover .shopCart{
+  fill: rgb(0, 191, 255);
+}

@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+.tlogo{
+  height: 25px; 
+  margin: 2.5px;
+}
+
+.flogo{
+  height: 30px; 
+}
+
+.pageAdress{
+  position: relative;
+  left: 50%;
+  transform: translate(10, -50%);
+  color: lightgrey;
+  text-decoration: none;
+}
+
+.lubov{
+  font-family: 'Macondo', cursive;
+  position: relative;
+  left: 1%;
+  transform: translate(10, -50%);
+  color: lightgrey;
+  text-decoration: none;
+}
+
+.heart{
+  width: 20px;
+  position: relative;
+  left: 1.5%;
+}

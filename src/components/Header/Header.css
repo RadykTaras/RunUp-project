@@ -1,0 +1,52 @@
+.nav-link.active {
+  background: none!important;
+}
+
+.tt{
+  color: bisque;
+  background-color: red;
+}
+
+.svgImg{
+  width: 70px;
+}
+
+.svgPath{
+  animation: changeColor 10s 1;
+  fill: #FFF; 
+  color: #FFF;
+}
+
+.rightLeg{
+  animation: changeColor 10s 1;
+  fill: rgb(255, 75, 219);
+  color: rgb(255, 75, 219);
+}
+
+.leftLeg{
+  animation: changeColor 10s 1;
+  fill: rgb(0, 191, 255);
+  color: rgb(0, 191, 255);
+}
+
+@keyframes changeColor{
+  0% {fill: #000; color: #000}
+  10% {fill: lightgreen; color: lightgreen}
+  25% {fill: rgb(56, 230, 62); color: rgb(56, 230, 62)}
+  35% {fill: rgb(0, 245, 172); color: rgb(0, 245, 172)}
+  50% {fill: yellow; color: yellow}
+  75% {fill: blue; color: blue}
+}
+
+.logo_container{
+  width: 500px !important;
+}
+
+.loginSvg:first-child{
+  width: 30px;
+  margin-right: 30px;
+}
+
+.loginSvg:hover{
+  cursor: pointer;
+}

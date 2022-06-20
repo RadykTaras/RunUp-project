@@ -4,8 +4,6 @@ import Colors from "./components/Colors";
 
 const Store = (props) =>{
   
-  
-  
   return (
     <div className={style.contentSection}>
       <div className={style.sortContainer}>

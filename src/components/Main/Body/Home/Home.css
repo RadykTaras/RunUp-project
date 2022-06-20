@@ -1,0 +1,37 @@
+
+.contentSectionHomePage{
+  min-height: 100%;
+  min-width: 100%;
+  background-image: url("./img/videoimg.jpg");
+  background-color: black;
+  background-size: cover;
+  display: flex;
+  justify-content: center; 
+}
+
+.contentSectionHomePage.hiden{
+  background-image: url("./img/mainImg.jpg");
+}
+
+.mainTitleHomePage{
+  display: flex;
+  padding: 10px 20px 20px 20px;
+  margin-top: 50%;
+  border-radius: 40px;
+  background-color: rgb(143, 143, 143, 0.7);
+  font-size: 60px;
+  color: white;
+  text-shadow: rgb(27, 27, 27) 1px 1px 10px;
+}
+
+.promoVideo{
+  position: absolute;
+  height: 96%;
+  left: 340px;
+}
+
+.promoVideo.hiden{
+  display: none;
+}
+
+

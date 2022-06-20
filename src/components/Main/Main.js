@@ -10,7 +10,7 @@ import Aside from './Aside/Aside';
 const Main = (props) => {
   return (
       <main className="mainSection">
-        <Aside state={props.state}/>
+        <Aside state={props.state} brandsInfo={props.brandsInfo}/>
         <div className="body">
           <Routes>
             <Route path="/" element={<Home />} />

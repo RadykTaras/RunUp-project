@@ -19,10 +19,10 @@ const Aside = (props) => {
   return (
       <>
         <Routes>
-            <Route path="/" element={<MainAside asideStatus={asideClassCheck} />} />
-            <Route path="/about" element={<MainAside asideStatus={asideClassCheck} />} />
+            <Route path="/" element={<MainAside asideStatus={asideClassCheck} brandsInfo={props.brandsInfo} />} />
+            <Route path="/about" element={<MainAside asideStatus={asideClassCheck} brandsInfo={props.brandsInfo} />} />
             <Route path="/shop" element={<ShopAside asideStatus={asideClassCheck} state={props.state}/>} />
-            <Route path="/login" element={<MainAside asideStatus={asideClassCheck} />} />
+            <Route path="/login" element={<MainAside asideStatus={asideClassCheck} brandsInfo={props.brandsInfo}/>} />
             <Route path="/user" element={<UserAside asideStatus={asideClassCheck} />} />
         </Routes>
         <div className={`asideArrow${asideClassCheck}`} onClick={AsideHide}>

@@ -9,7 +9,7 @@ const App = (props) => {
   return (
     <BrowserRouter>
       <Header />
-      <Main state={props.state}/>
+      <Main state={props.state} brandsInfo={props.brandsInfo}/>
       <Footer />
     </BrowserRouter>
   );

@@ -1,0 +1,18 @@
+.input{
+  margin-left: 10px;
+}
+
+.label{
+  margin-left: 10px;
+  font-style: italic;
+  font-weight: 600;
+  
+}
+
+.count{
+  font-style: italic;
+  font-size: 12px;
+  margin-left: 5px;
+  color: rgb(195, 195, 195);
+}
+

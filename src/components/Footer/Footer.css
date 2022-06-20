@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
+.footer{
+  min-width: 720px;
+}
+
 .tlogo{
   height: 25px; 
   margin: 2.5px;

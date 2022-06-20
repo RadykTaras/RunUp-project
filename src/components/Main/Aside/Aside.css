@@ -1,0 +1,54 @@
+.aside{
+  max-height: 100%;
+  background-image: url("./img/aside_background.jpg");
+  background-size: 100%;
+  padding: 20px 0 0 0;
+  overflow-y: scroll;  
+  min-width: 340px;
+}
+
+.aside.hiden{
+  min-width: 25px;
+  width: 25px;
+  position: relative;
+  background-size: 300px;
+  content-visibility: hidden;
+}
+
+.inputSex.hiden{
+  display: none;
+}
+
+.inputBrand.hiden{
+  display: none;
+}
+
+.inputPrice.hiden{
+  display: none;
+}
+
+.asideArrow{
+  padding: 2px;
+  position: fixed;
+  top: 90px;
+  left: 314px;
+  width: 24px;
+  height: max-content;
+}
+
+.arrowSVG{
+  transform: rotate(-90deg);
+  width: 15px;
+  margin-bottom: 3px;
+}
+
+.asideArrow.hiden{
+  padding: 2px;
+  position: fixed;
+  top: 90px;
+  left: -4px;
+  width: 24px;
+  height: max-content;
+  transform: rotate(180deg);
+}
+

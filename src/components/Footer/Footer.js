@@ -9,7 +9,7 @@ import Container from 'react-bootstrap/Container';
 
 const Footer = () => {
   return (
-    <>
+    <footer className="footer">
       <Navbar bg="dark" variant="dark">
         <span className="lubov">Liubov</span>
         <img className="heart" alt="heart" src={Heart} />
@@ -31,7 +31,7 @@ const Footer = () => {
           </Nav>
         </Container>
       </Navbar>
-    </>
+    </footer>
   );
 }
 

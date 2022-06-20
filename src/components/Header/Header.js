@@ -9,25 +9,25 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <>
+    <header className="header">
       <Navbar className="shadow" bg="dark" variant="dark" sticky="top">
         <Container className="justify-content-start logo_container mx-4">
           <Logo />
           <Navbar.Brand className="mx-4">RunUp</Navbar.Brand>
         </Container>
         <Container className="justify-content-start">
-          <Nav className="me-auto bg-dark mx-5" variant="tabs" defaultActiveKey="/"> 
-            <LinkContainer to="/">
+          <Nav className="me-auto mx-5 customNav"> 
+            <LinkContainer className="HomeButton navButton" to="/">
               <Nav.Link>
                 Home
               </Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/Shop">
+            <LinkContainer className="ShopButton navButton" to="/shop">
               <Nav.Link>
                 Shop
               </Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/about">
+            <LinkContainer className="AboutButton navButton" to="/about">
               <Nav.Link>
                 About
               </Nav.Link>
@@ -40,7 +40,7 @@ const Header = () => {
           </LinkContainer>
         </Container>
       </Navbar>
-    </>
+    </header>
   );
 }
 

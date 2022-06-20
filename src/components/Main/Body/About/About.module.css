@@ -1,3 +1,27 @@
 .contentSection{
-  background-color: rgb(133, 75, 0);
+  min-height: 100%;
+  min-width: 100%;
+  background-image: url("./img/background.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center; 
+}
+
+.mainTitle{
+  font: italic small-caps bold 16px/2 cursive;
+  padding: 60px 80px 0px 80px;
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  color: white;
+  text-shadow: rgb(27, 27, 27) 1px 1px 10px;
+}
+
+.sign{
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
 }

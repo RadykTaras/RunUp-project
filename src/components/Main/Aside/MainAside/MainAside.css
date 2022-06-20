@@ -1,13 +1,11 @@
-.aside{
-  min-height: 100%;
-  background-image: url("./img/common/aside_background.jpg");
-  background-size: 100%;
-  width: 20rem;
-}
 
 .card{
   width: 18rem;
-  margin: 20px auto;
+  margin: 15px 25px 15px 25px;
+}
+
+.card.hiden{
+  display: none;
 }
 
 .brand_Img{

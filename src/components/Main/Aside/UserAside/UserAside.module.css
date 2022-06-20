@@ -1,6 +1,3 @@
-.aside{
-  min-height: 100%;
-  background-color: aqua;
-  width: 20rem;
+.menuContainer{
+  width: 340px;
 }
-

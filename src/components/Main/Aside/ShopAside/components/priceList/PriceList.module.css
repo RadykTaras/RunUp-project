@@ -1,0 +1,84 @@
+:root{
+  --minSize: 0%;
+  --maxSize: 0%;
+}
+
+.priceInput{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.priceInput .field{
+  font-weight: 600;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+}
+
+.field input{
+  width: 80px;
+  border-radius: 5px;
+  margin: 2px 6px;
+  font-weight: 600;
+  padding: 2px 10px;
+}
+
+.separator{
+  margin-right: 6px;
+  font-weight: 700;
+}
+
+.slider{
+  margin: 10px auto;
+  border-radius: 5px;
+  width: 80%;
+  height: 8px;
+  background: #ddd;
+  position: relative;
+}
+
+.slider .progress{
+  height: 8px;
+  border-radius: 5px;
+  background: rgb(53, 221, 210);
+  position: absolute;
+  left: var(--minSize);
+  right: var(--maxSize);
+}
+
+.rangeInput{
+  position: relative;
+}
+
+.rangeInput input{
+  position: absolute;
+  height: 8px;
+  top: -18px;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  -webkit-appearance: none;
+  background: none;
+  pointer-events: none;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  pointer-events: auto;
+  -webkit-appearance: none;
+  background-color: rgb(53, 221, 210);
+}
+
+input[type="range"]::-moz-range-thumb{
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  border: none;
+  pointer-events: auto;
+  -moz-appearance: none;
+  background-color: rgb(53, 221, 210);
+}

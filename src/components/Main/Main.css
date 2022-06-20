@@ -1,10 +1,20 @@
+*{
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+}
+
+*::-webkit-scrollbar{
+  display: none;
+}
+
 .mainSection{
+  min-width: 720px;
   display: flex;
-  background-color: rgb(241, 241, 241);
+  height: 90vh;
 }
 
 .body{
-  min-height: 100vh;
+  flex-grow: 1;
 }
 
 .shopCartImg{

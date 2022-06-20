@@ -1,0 +1,8 @@
+.colorsContainer{
+  width: 24px;
+  height: 25px;
+  border: 0.4px solid #aaa;
+  border-radius: 12px;
+  margin-right: 10px;
+  box-shadow: 2px 2px 2px #aaaaaa;
+}

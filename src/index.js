@@ -1,6 +1,5 @@
 import React from 'react';
-import sneakers from './sneakers.json';
-import brands from './brands.json';
+import state from './state';
 import ReactDOM from 'react-dom/client';
 import App from './components/App';
 
@@ -8,7 +7,7 @@ import App from './components/App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App state={sneakers} brandsInfo={brands}/>
+    <App state={state} />
   </React.StrictMode>
 );
 

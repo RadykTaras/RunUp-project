@@ -1,42 +1,36 @@
 import React from "react";
-import{Link} from "react-router-dom";
+import{Link, useLocation} from "react-router-dom";
 import style from "./Register.module.css";
-import {ReactComponent as GmailLogo} from "./img/gmail.svg";
-import {ReactComponent as FbLogo} from "./img/facebook.svg";
+import {ReactComponent as GmailLogo} from "../img/gmail.svg";
+import {ReactComponent as FbLogo} from "../img/facebook.svg";
 
-const Register = () =>{
+const Register = (props) =>{
+  let location = useLocation();
+  
   return (
   <div className={style.contentSection}>
     <div className={style.form}>
-      <h3 className={style.title}>SIGN UP</h3>
+      <h3 className={style.title}>SIGN UP <p className={style.errMessage}>{props.state.registration.store.errorMessage}</p></h3>
       <div className={style.formBody}>
         <div className={style.inputContainer}>
           <label className={style.label} for="email">Email</label>
-          <input className={style.input} type="text" id="email" />
+          <input className={style.input} value={props.state.registration.store.email} type="text" id="email"  onInput={(e) => {props.state.registration.updateEmail(e.target.value)}}/>
         </div>
         <div className={style.inputContainer}>
           <label className={style.label} for="password">Password</label>
-          <input className={style.input} type="password"  id="password" />
+          <input className={style.input} value={props.state.registration.store.password} type="password"  id="password" onInput={(e) => {props.state.registration.updatePassword(e.target.value)}}/>
         </div>
         <div className={style.inputContainer}>
           <label className={style.label} for="password">Reapet password</label>
-          <input className={style.input} type="password"  id="password" />
+          <input className={style.input} value={props.state.registration.store.reapetPassword} type="password"  id="password" onInput={(e) => {props.state.registration.updateReapetedPassword(e.target.value)}}/>
         </div>
-        <button className={style.button}>
+        <button className={style.button} onClick={() => {if(props.state.registration.makeRegistration()) {location.pathname = '/login'}}}>
           SIGN UP
         </button>
       </div>
       <div className={style.square}>
         <h6 className={style.squareTxt}>OR</h6>
       </div>
-      <div className={style.logoContainer}>
-        <div className={style.logo}>
-          <GmailLogo />
-        </div>
-        <div className={style.logo}>
-          <FbLogo />
-        </div>
-      </div>  
       <div className={style.newAccountContainer}>
         <span className={style.newAccountTxt}>
           Already a user?

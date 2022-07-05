@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = (props) => {
   return (
     <BrowserRouter>
-      <Header />
+      <Header state={props.state}/>
       <Main state={props.state} />
       <Footer />
     </BrowserRouter>

@@ -4,10 +4,22 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import { LinkContainer } from 'react-router-bootstrap'
 import {ReactComponent as Logo} from './img/logo.svg';
-import {ReactComponent as Login} from './img/login.svg';
+import Login from './img/login.svg';
+import Profile from './img/profile.svg';
 import './Header.css';
 
-const Header = () => {
+const Header = (props) => {
+  let userStatus = '',
+    route = '';
+  
+  if(props.state.loginStatus === 'Admin' || props.state.loginStatus === 'Costumer'){
+    userStatus = Profile;
+    route = 'user/main';
+  } else {
+    userStatus = Login;
+    route = '/login';
+  }
+  
   return (
     <header className="header">
       <Navbar className="shadow" bg="dark" variant="dark" sticky="top">
@@ -15,9 +27,9 @@ const Header = () => {
           <Logo />
           <Navbar.Brand className="mx-4">RunUp</Navbar.Brand>
         </Container>
-        <Container className="justify-content-start">
-          <Nav className="me-auto mx-5 customNav"> 
-            <LinkContainer className="HomeButton navButton" to="/">
+        <Container className="justify-content-start ss">
+          <Nav className="me-auto customNav"> 
+            <LinkContainer className="HomeButton navButton" to="">
               <Nav.Link>
                 Home
               </Nav.Link>
@@ -32,12 +44,14 @@ const Header = () => {
                 About
               </Nav.Link>
             </LinkContainer>
+            <Container className="loginLink">
+              <LinkContainer className="loginSvg" to={route}>
+                <Nav.Link>
+                <img src={userStatus} alt="login"  />
+                </Nav.Link>
+              </LinkContainer>
+            </Container>
           </Nav>
-        </Container>
-        <Container className="justify-content-end">
-          <LinkContainer className="loginSvg" to="/login">
-            <Login />
-          </LinkContainer>
         </Container>
       </Navbar>
     </header>

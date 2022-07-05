@@ -8,7 +8,7 @@
 }
 
 .mainSection{
-  min-width: 720px;
+  min-width: 750px;
   display: flex;
   height: 90vh;
 }
@@ -27,3 +27,11 @@
   fill: rgb(0, 191, 255);
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}

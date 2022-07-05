@@ -1,3 +1,9 @@
 .menuContainer{
-  width: 340px;
+  width: 240px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.li{
+  list-style-type: none;
 }

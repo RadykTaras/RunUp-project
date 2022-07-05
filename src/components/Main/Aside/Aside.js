@@ -8,6 +8,12 @@ import './Aside.css';
 
 const Aside = (props) => {
   
+  let userRoute = '';
+  
+  if(props.state.login.store.loginStatus){
+    userRoute = 'user/*'
+  }
+  
   const [asideState, setAsideState] = useState(false);
   
   function AsideHide (){
@@ -26,8 +32,8 @@ const Aside = (props) => {
       <>
         <Routes>
             <Route path="/" element={<MainAside asideStatus={asideClassCheck} brandsInfo={props.state.aside.brands} />} />
-            <Route path="/shop" element={<><ShopAside asideStatus={asideClassCheck} state={props.state.shopPage}/> <div className={`asideArrow${asideClassCheck}`} onClick={AsideHide}><AsideArrow /></div></>} />
-            <Route path="/user" element={<><UserAside asideStatus={asideClassCheck} /> <div className={`asideArrow${asideClassCheck}`} onClick={AsideHide}><AsideArrow /></div></> } />
+              <Route path="shop" element={<><ShopAside asideStatus={asideClassCheck} state={props.state.shopPage}/> <div className={`asideArrow${asideClassCheck}`} onClick={AsideHide}><AsideArrow /></div></>} />
+              <Route path={userRoute} element={<><UserAside asideStatus={asideClassCheck} /> <div className={`asideArrow${asideClassCheck}`} onClick={AsideHide}><AsideArrow /></div></> } />
         </Routes>
        
       </>

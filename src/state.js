@@ -1,6 +1,31 @@
 
+let rerenderEntairTree = () => {
+  console.log("State has been changed")
+}
 
 let state = {
+  users: [
+    {
+      "id": 1,
+      "status": "Admin",
+      "userName": "Radyk Taras",
+      "mail": "radyk.taras.ua@gmail.com",
+      "password": "Skayzer1892"
+    },
+    {
+      "id": 2,
+      "status": "Costumer",
+      "userName": "Liubov Poleschuk",
+      "mail": "luibov@gmail.com",
+      "password": "Liubov29"
+    },
+  ],
+  loginedUser: {
+    "status": "",
+    "userName": "",
+    "mail": "",
+    "password": ""
+  },
   aside: {
     brands: [
       {
@@ -641,9 +666,124 @@ let state = {
         "colors": "Yellow red",
         "price": 90
       }
+    ],
+    filteredSneakers: [
+      
     ]
+  },
+  registration: {
+    store: [
+      { 
+        'email' : ' ',
+        'password' : ' ',
+        'reapetPassword' : ' ',
+        'errorMessage': ' '
+      }
+    ],
+    updateEmail: (inputEmail) => {
+      state.registration.store.email = inputEmail;
+      rerenderEntairTree();
+    },
+    updatePassword: (inputPass) => {
+      state.registration.store.password = inputPass;
+      rerenderEntairTree();
+    },
+    updateReapetedPassword: (inputRPass) => {
+      state.registration.store.reapetPassword = inputRPass;
+      rerenderEntairTree();
+    },
+    createErrorMessage: (message) => {
+      state.registration.store.errorMessage = message;
+      rerenderEntairTree();
+    },
+    checkPassVal: () => {
+      let passValidationExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+      if(state.registration.store.password.match(passValidationExp)){
+        return true;
+      }else{
+        state.registration.createErrorMessage('Password is not valid!')
+      }
+    },
+    checkEmailVal: () => {
+      let emailValidationExp = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
+      if(state.registration.store.email.match(emailValidationExp))
+      {
+        return true;
+      }else{
+        state.registration.createErrorMessage('Email is not valid!')
+      }
+    },
+    makeRegistration: () => {
+      if(state.registration.checkEmailVal() && state.registration.checkPassVal()){
+        if(state.registration.store.password === state.registration.store.reapetPassword){
+          state.users.push(
+            {
+              "id" : state.users.length + 1,
+              "status" : "Costumer",
+              "userName" : "User" + state.users.length + 1,
+              "mail" : state.registration.store.email,
+              "password" : state.registration.store.password 
+            }
+          )
+          rerenderEntairTree();
+          return true;
+        } else {
+          state.registration.createErrorMessage('Passwords do not match!')
+        }
+      }
+    }
+  },
+  login: {
+    store: [
+      {
+        'loginStatus': "",
+        'loginValue': "",
+        'passwordValue': "",
+        'errorMessage': ""
+      }
+    ],
+    
+    createErrorMessage: () =>{
+      state.login.store.errorMessage = "Wrong email or password!";
+      rerenderEntairTree();
+    },
+    
+    changeUserStatus: (status) => {
+      if(status === "Admin"){
+        state.login.store.loginStatus = "Admin";
+      }else{
+        state.login.store.loginStatus = "Costumer";
+      } 
+      rerenderEntairTree();
+    },
+    
+    updateLogin: (inputLogin) => {
+      state.login.store.loginValue = inputLogin;
+      rerenderEntairTree();
+    },
+    
+    updatePassword: (inputPassword) => {
+      state.login.store.passwordValue = inputPassword;
+      rerenderEntairTree();
+    },
+    
+    makeLogin: () =>{
+      for(let i=0; i< state.users.length; i++){
+        if(state.login.store.loginValue === state.users[i].mail && state.login.store.passwordValue === state.users[i].password){
+          state.loginedUser.status = state.users[i].status;
+          state.loginedUser.userName = state.users[i].userName;
+          state.loginedUser.mail = state.users[i].mail;
+          state.loginedUser.password = state.users[i].password;
+          state.login.changeUserStatus(state.loginedUser.status);
+        }
+      }
+    }
   }
 } 
+
+export const stateStatus = (observer) => {
+  rerenderEntairTree = observer;
+}
 
 export default state; 
   

@@ -34,6 +34,7 @@ const Aside = (props) => {
             <Route path="/" element={<MainAside asideStatus={asideClassCheck} brandsInfo={props.state.aside.brands} />} />
               <Route path="shop" element={<><ShopAside asideStatus={asideClassCheck} state={props.state.shopPage}/> <div className={`asideArrow${asideClassCheck}`} onClick={AsideHide}><AsideArrow /></div></>} />
               <Route path={userRoute} element={<><UserAside asideStatus={asideClassCheck} /> <div className={`asideArrow${asideClassCheck}`} onClick={AsideHide}><AsideArrow /></div></> } />
+              <Route path="*" element={<></>} />
         </Routes>
        
       </>

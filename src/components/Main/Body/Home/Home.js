@@ -20,7 +20,7 @@ const Home = () =>{
         <video className={`promoVideo${video}`}
           ref={runVideo}
           src={PromoVideo}
-          preLoad="auto"
+          preload="auto"
           loop 
           onClick={() => {
             if(isVideoPlay){

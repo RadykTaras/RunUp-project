@@ -6,7 +6,6 @@ import Sign from "./img/sign";
 const About = () =>{
   return (
     <div className={style.contentSection}>
-      
         <h6 className={style.mainTitle}>
           RunUp Company<br/><br/>
           First of all, we are a team. Team that aims to engage people in an autistic lifestyle, namely running. 

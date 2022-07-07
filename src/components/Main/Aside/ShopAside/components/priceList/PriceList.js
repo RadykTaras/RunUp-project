@@ -33,21 +33,21 @@ const PriceList = (props) => {
           <span>
             Min
           </span>
-          <input type="number" className={style.inputMin} value={minValue} />
+          <input type="number" className={style.inputMin} value={minValue} readOnly/>
         </div>
         <div className={style.separator}>-</div>
         <div className={style.field}>
           <span>
             Max
           </span>
-          <input type="number" className={style.inputMax} value={maxValue} />
+          <input type="number" className={style.inputMax} value={maxValue} readOnly/>
         </div>
       </div>
       <div className={style.slider}>
         <div className={style.progress} />
       </div>
       <div className={style.rangeInput}>
-        <input type="range" name="min" className={style.rangeMin} min={minPrice} max={maxPrice} defaultValue={minPrice} onInput={(event) => {
+        <input type="range" name="min" className={style.rangeMin} min={minPrice} max={maxPrice} defaultValue={minPrice} onChange={(event) => {
           if(event.target.value > maxValue - priceInterval)
           {
             event.target.value = minValue
@@ -56,7 +56,7 @@ const PriceList = (props) => {
           }
           }}
         />
-        <input type="range" name="max" className={style.rangeMax} min={minPrice} max={maxPrice} defaultValue={maxPrice} onInput={(event) => {
+        <input type="range" name="max" className={style.rangeMax} min={minPrice} max={maxPrice} defaultValue={maxPrice} onChange={(event) => {
           if(event.target.value < parseInt(minValue) + priceInterval)
           {
             event.target.value = maxValue

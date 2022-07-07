@@ -29,9 +29,9 @@ const SexList = (props) => {
   return (
       <>
         {uniqElements.map((el) => ( 
-          <div className={style.container}>
+          <div className={style.container} key={el}>
             <input type="checkbox" name={el} className={style.input} defaultChecked="true"/>
-            <label for={el}>
+            <label htmlFor={el}>
               <span className={style.label}> {el} </span>
               <span className={style.count}> {result[`${el}`]} </span>
             </label>

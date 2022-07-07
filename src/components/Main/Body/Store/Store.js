@@ -7,7 +7,7 @@ const Store = (props) =>{
   return (
     <div className={style.contentSection}>
       <div className={style.sortContainer}>
-        <label className={style.sortLabel} for="sort">Sorted by: </label>
+        <label className={style.sortLabel} htmlFor="sort">Sorted by: </label>
         <select className={style.sort} name="sort">
           <option value="lower">lower price first</option>
           <option value="highter">highter price first</option>
@@ -16,7 +16,7 @@ const Store = (props) =>{
       </div>
       <div className={style.content}>
         {props.state.sneakers.map((sneaker) => (
-          <div className={style.sneakersCard}>
+          <div key={sneaker.id} className={style.sneakersCard}>
             <img className={style.sneakers} alt="sneakers" src={require (`${sneaker.mainImgSRC}`)}/>
             <h3 className={style.brand}>
               {sneaker.brand}
@@ -28,7 +28,7 @@ const Store = (props) =>{
               <h5 className={style.sneakersSizes}>
               Sizes: {sneaker.sizes}
               </h5>
-              {sneaker.colors.split(' ').map((color) => (<Colors color={color}/>))}
+              {sneaker.colors.split(' ').map((color) => (<Colors key={color+sneaker.id} color={color}/>))}
             </div>
           </div>
           ))

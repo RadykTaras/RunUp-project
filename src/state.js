@@ -440,7 +440,7 @@ let state = {
       },
       
       {
-        "id": 27,
+        "id": 29,
         "brand": "Nike",
         "mainImgSRC": "./img/Nike/man/1 1.jpg",
         "pictures": " ",
@@ -452,7 +452,7 @@ let state = {
       },
       
       {
-        "id": 28,
+        "id": 30,
         "brand": "Nike",
         "mainImgSRC": "./img/Nike/man/2 1.jpg",
         "pictures": " ",
@@ -464,7 +464,7 @@ let state = {
       },
       
       {
-        "id": 29,
+        "id": 31,
         "brand": "Nike",
         "mainImgSRC": "./img/Nike/man/3 1.jpg",
         "pictures": " ",
@@ -476,7 +476,7 @@ let state = {
       },
       
       {
-        "id": 30,
+        "id": 32,
         "brand": "Nike",
         "mainImgSRC": "./img/Nike/man/4 1.jpg",
         "pictures": " ",
@@ -488,7 +488,7 @@ let state = {
       },
       
       {
-        "id": 31,
+        "id": 33,
         "brand": "Nike",
         "mainImgSRC": "./img/Nike/man/5 1.jpg",
         "pictures": " ",
@@ -500,7 +500,7 @@ let state = {
       },
       
       {
-        "id": 32,
+        "id": 34,
         "brand": "Hoka",
         "mainImgSRC": "./img/Hoka/woman/1 1.jpg",
         "pictures": " ",
@@ -512,7 +512,7 @@ let state = {
       },
       
       {
-        "id": 33,
+        "id": 35,
         "brand": "Hoka",
         "mainImgSRC": "./img/Hoka/woman/2 1.jpg",
         "pictures": " ",
@@ -524,7 +524,7 @@ let state = {
       },
       
       {
-        "id": 34,
+        "id": 36,
         "brand": "Hoka",
         "mainImgSRC": "./img/Hoka/woman/3 1.jpg",
         "pictures": " ",
@@ -536,7 +536,7 @@ let state = {
       },
       
       {
-        "id": 35,
+        "id": 37,
         "brand": "Hoka",
         "mainImgSRC": "./img/Hoka/man/1 1.jpg",
         "pictures": " ",
@@ -548,7 +548,7 @@ let state = {
       },
       
       {
-        "id": 36,
+        "id": 38,
         "brand": "Hoka",
         "mainImgSRC": "./img/Hoka/man/2 1.jpg",
         "pictures": " ",
@@ -560,7 +560,7 @@ let state = {
       },
       
       {
-        "id": 37,
+        "id": 39,
         "brand": "Hoka",
         "mainImgSRC": "./img/Hoka/man/3 1.jpg",
         "pictures": " ",
@@ -572,7 +572,7 @@ let state = {
       },
       
       {
-        "id": 38,
+        "id": 40,
         "brand": "Brooks",
         "mainImgSRC": "./img/Brooks/woman/1 1.jpg",
         "pictures": " ",
@@ -584,7 +584,7 @@ let state = {
       },
       
       {
-        "id": 39,
+        "id": 41,
         "brand": "Brooks",
         "mainImgSRC": "./img/Brooks/woman/2 1.jpg",
         "pictures": " ",
@@ -596,7 +596,7 @@ let state = {
       },
       
       {
-        "id": 40,
+        "id": 42,
         "brand": "Brooks",
         "mainImgSRC": "./img/Brooks/man/1 1.jpg",
         "pictures": " ",
@@ -608,7 +608,7 @@ let state = {
       },
       
       {
-        "id": 41,
+        "id": 43,
         "brand": "Brooks",
         "mainImgSRC": "./img/Brooks/man/2 1.jpg",
         "pictures": " ",
@@ -620,7 +620,7 @@ let state = {
       },
       
       {
-        "id": 42,
+        "id": 44,
         "brand": "New Balance",
         "mainImgSRC": "./img/NewBalance/man/1 1.jpg",
         "pictures": " ",
@@ -632,7 +632,7 @@ let state = {
       },
       
       {
-        "id": 43,
+        "id": 45,
         "brand": "New Balance",
         "mainImgSRC": "./img/NewBalance/woman/2 1.jpg",
         "pictures": " ",
@@ -644,7 +644,7 @@ let state = {
       },
       
       {
-        "id": 44,
+        "id": 46,
         "brand": "New Balance",
         "mainImgSRC": "./img/NewBalance/woman/1 1.jpg",
         "pictures": " ",
@@ -656,7 +656,7 @@ let state = {
       },
       
       {
-        "id": 45,
+        "id": 47,
         "brand": "New Balance",
         "mainImgSRC": "./img/NewBalance/man/2 1.jpg",
         "pictures": " ",
@@ -739,7 +739,9 @@ let state = {
         'loginStatus': "",
         'loginValue': "",
         'passwordValue': "",
-        'errorMessage': ""
+        'errorMessage': "",
+        'clientId': "27121478558-kdbcqf6guvfls7dp8omg7atg59lvbrtr.apps.googleusercontent.com",
+        'clientSecret': "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"
       }
     ],
     
@@ -777,6 +779,15 @@ let state = {
           state.login.changeUserStatus(state.loginedUser.status);
         }
       }
+    },
+    
+    makeLoginWithGoogle: (userInfo) =>{
+    
+      state.loginedUser.status = "Costumer";
+      state.loginedUser.userName = userInfo.Ad;
+      state.loginedUser.mail =  userInfo.su;
+      state.loginedUser.password = userInfo.NT
+      state.login.changeUserStatus(state.loginedUser.status);
     }
   }
 } 

@@ -15,7 +15,7 @@ const Main = (props) => {
     loginRoute = 'login';
   
   
-  if(props.state.login.store.loginStatus){
+  if(props.state.loginForm.store.loginStatus){
     userRoute = 'user/*'
     loginRoute = '';
   }
@@ -27,11 +27,11 @@ const Main = (props) => {
           <Routes>
             <Route path="/" element={<Home />} />
               <Route path="about" element={<About />} />
-              <Route path="shop" element={<Store state={props.state.shopPage}/>} />
+              <Route path="shop" element={<Store state={props.state}/>} />
               <Route path={loginRoute} element={<Login state={props.state} />} />
               <Route path="register" element={<Register state={props.state} />} />
               <Route path="*" element={<Home />} />
-              <Route path={userRoute} element={<User loginStatus={props.state.login.store.loginStatus}/>} />
+              <Route path={userRoute} element={<User loginStatus={props.state.loginForm.store.loginStatus}/>} />
           </Routes>
         </div>
       </main>

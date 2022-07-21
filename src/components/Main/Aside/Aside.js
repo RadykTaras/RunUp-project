@@ -10,7 +10,7 @@ const Aside = (props) => {
   
   let userRoute = '';
   
-  if(props.state.login.store.loginStatus){
+  if(props.state.loginForm.store.loginStatus){
     userRoute = 'user/*'
   }
   
@@ -31,8 +31,8 @@ const Aside = (props) => {
   return (
       <>
         <Routes>
-            <Route path="/" element={<MainAside asideStatus={asideClassCheck} brandsInfo={props.state.aside.brands} />} />
-              <Route path="shop" element={<><ShopAside asideStatus={asideClassCheck} state={props.state.shopPage}/> <div className={`asideArrow${asideClassCheck}`} onClick={AsideHide}><AsideArrow /></div></>} />
+            <Route path="/" element={<MainAside asideStatus={asideClassCheck} brandsInfo={props.state._store.brands} />} />
+              <Route path="shop" element={<><ShopAside asideStatus={asideClassCheck} state={props.state}/> <div className={`asideArrow${asideClassCheck}`} onClick={AsideHide}><AsideArrow /></div></>} />
               <Route path={userRoute} element={<><UserAside asideStatus={asideClassCheck} /> <div className={`asideArrow${asideClassCheck}`} onClick={AsideHide}><AsideArrow /></div></> } />
               <Route path="*" element={<></>} />
         </Routes>

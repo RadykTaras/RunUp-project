@@ -38,7 +38,7 @@ const ShopAside = (props) => {
                 <Arrow />
               </button>
               <div className={`inputBrand${brandListClassCheck}`}>
-                <FilterList state={props.state.sneakers} segment="brand" />
+                <FilterList state={props.state._store.sneakers} segment="brand" />
               </div>
             </div>
             <div className={style.list}>
@@ -47,7 +47,7 @@ const ShopAside = (props) => {
                 <Arrow />
               </button>
               <div className={`inputPrice${priceListClassCheck}`}>
-                <PriceList state={props.state.sneakers}/>
+                <PriceList state={props.state._store.sneakers}/>
               </div>
             </div>
             <div className={style.list}>
@@ -56,7 +56,7 @@ const ShopAside = (props) => {
                 <Arrow />
               </button>
               <div className={`inputSex${sexListClassCheck}`}>
-                <FilterList state={props.state.sneakers} segment="sex" />
+                <FilterList state={props.state._store.sneakers} segment="sex" />
               </div>
             </div>
           </form>

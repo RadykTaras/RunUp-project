@@ -1,32 +1,35 @@
 
-let rerenderEntairTree = () => {
-  console.log("State has been changed")
+import usersReducer from "./users-reducer";
+import brandsReducer from "./brands-reducer";
+import sneakersReducer from "./sneakers-reducer";
+import filteredSneakersReducer from "./filteredSneakers-reducer";
+import loginedUserReducer from "./loginedUser-reducer"; 
+ 
+ let rerenderEntairTree = () => {
+   console.log("State has been changed")
 }
 
+
+
 let state = {
-  users: [
-    {
-      "id": 1,
-      "status": "Admin",
-      "userName": "Radyk Taras",
-      "mail": "radyk.taras.ua@gmail.com",
-      "password": "Skayzer1892"
-    },
-    {
-      "id": 2,
-      "status": "Costumer",
-      "userName": "Liubov Poleschuk",
-      "mail": "luibov@gmail.com",
-      "password": "Liubov29"
-    },
-  ],
-  loginedUser: {
-    "status": "",
-    "userName": "",
-    "mail": "",
-    "password": ""
-  },
-  aside: {
+  
+  _store: {
+    users: [
+      {
+        "id": 1,
+        "status": "Admin",
+        "userName": "Radyk Taras",
+        "mail": "radyk.taras.ua@gmail.com",
+        "password": "Skayzer1892"
+      },
+      {
+        "id": 2,
+        "status": "Costumer",
+        "userName": "Liubov Poleschuk",
+        "mail": "luibov@gmail.com",
+        "password": "Liubov29"
+      }
+    ],
     brands: [
       {
         "id": 1,
@@ -99,9 +102,7 @@ let state = {
         "ShortInfo": "American sports footwear and apparel brand that was established in 1906. New Balance is one of the world's major sports footwear and apparel manufacturers.",
         "website": "https://www.newbalance.com/"
       }
-    ]
-  },
-  shopPage: {
+    ],
     sneakers: [
       {
         "id": 1,
@@ -255,7 +256,7 @@ let state = {
         "sex": "Woman",
         "model": "Gel +",
         "sizes": "7, 7.5, 8",
-        "colors": "Thistle yellow",
+        "colors": "statetle yellow",
         "price": 115
       },
       
@@ -669,10 +670,18 @@ let state = {
     ],
     filteredSneakers: [
       
-    ]
+    ],
+    loginedUser: {
+      "status": "",
+      "userName": "",
+      "mail": "",
+      "password": ""
+    },
+    changed : "false"
   },
-  registration: {
-    store: [
+  
+  registrationForm: {
+    store : [
       { 
         'email' : ' ',
         'password' : ' ',
@@ -680,60 +689,41 @@ let state = {
         'errorMessage': ' '
       }
     ],
-    updateEmail: (inputEmail) => {
-      state.registration.store.email = inputEmail;
+    updateEmail : (inputEmail) => {
+      state.registrationForm.store.email = inputEmail;
       rerenderEntairTree();
     },
-    updatePassword: (inputPass) => {
-      state.registration.store.password = inputPass;
+    updatePassword : (inputPass) => {
+      state.registrationForm.store.password = inputPass;
       rerenderEntairTree();
     },
-    updateReapetedPassword: (inputRPass) => {
-      state.registration.store.reapetPassword = inputRPass;
+    updateReapetedPassword : (inputRPass) => {
+      state.registrationForm.store.reapetPassword = inputRPass;
       rerenderEntairTree();
     },
-    createErrorMessage: (message) => {
-      state.registration.store.errorMessage = message;
+    createErrorMessage : (message) => {
+      state.registrationForm.store.errorMessage = message;
       rerenderEntairTree();
     },
-    checkPassVal: () => {
+    checkPassVal : () => {
       let passValidationExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
-      if(state.registration.store.password.match(passValidationExp)){
+      if(state.registrationForm.store.password.match(passValidationExp)){
         return true;
       }else{
-        state.registration.createErrorMessage('Password is not valid!')
+        state.registrationForm.createErrorMessage('Password is not valid!')
       }
     },
-    checkEmailVal: () => {
+    checkEmailVal : () => {
       let emailValidationExp = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
-      if(state.registration.store.email.match(emailValidationExp))
+      if(state.registrationForm.store.email.match(emailValidationExp))
       {
         return true;
       }else{
-        state.registration.createErrorMessage('Email is not valid!')
-      }
-    },
-    makeRegistration: () => {
-      if(state.registration.checkEmailVal() && state.registration.checkPassVal()){
-        if(state.registration.store.password === state.registration.store.reapetPassword){
-          state.users.push(
-            {
-              "id" : state.users.length + 1,
-              "status" : "Costumer",
-              "userName" : "User" + state.users.length + 1,
-              "mail" : state.registration.store.email,
-              "password" : state.registration.store.password 
-            }
-          )
-          rerenderEntairTree();
-          return true;
-        } else {
-          state.registration.createErrorMessage('Passwords do not match!')
-        }
+        state.registrationForm.createErrorMessage('Email is not valid!')
       }
     }
   },
-  login: {
+  loginForm: {
     store: [
       {
         'loginStatus': "",
@@ -746,48 +736,42 @@ let state = {
     ],
     
     createErrorMessage: () =>{
-      state.login.store.errorMessage = "Wrong email or password!";
+      state.loginForm.store.errorMessage = "Wrong email or password!";
       rerenderEntairTree();
     },
     
     changeUserStatus: (status) => {
       if(status === "Admin"){
-        state.login.store.loginStatus = "Admin";
+        state.loginForm.store.loginStatus = "Admin";
       }else{
-        state.login.store.loginStatus = "Costumer";
+        state.loginForm.store.loginStatus = "Costumer";
       } 
       rerenderEntairTree();
     },
     
     updateLogin: (inputLogin) => {
-      state.login.store.loginValue = inputLogin;
+      state.loginForm.store.loginValue = inputLogin;
       rerenderEntairTree();
     },
     
     updatePassword: (inputPassword) => {
-      state.login.store.passwordValue = inputPassword;
+      state.loginForm.store.passwordValue = inputPassword;
       rerenderEntairTree();
-    },
+    }
+  },
+  
+  dispatch(action){
     
-    makeLogin: () =>{
-      for(let i=0; i< state.users.length; i++){
-        if(state.login.store.loginValue === state.users[i].mail && state.login.store.passwordValue === state.users[i].password){
-          state.loginedUser.status = state.users[i].status;
-          state.loginedUser.userName = state.users[i].userName;
-          state.loginedUser.mail = state.users[i].mail;
-          state.loginedUser.password = state.users[i].password;
-          state.login.changeUserStatus(state.loginedUser.status);
-        }
-      }
-    },
+    state._store.users = usersReducer(state._store.users, state.registrationForm, action);
+    state._store.loginedUser = loginedUserReducer(state, state.loginForm, action);
+    state._store.brands = brandsReducer(state._store.brands, action,);
+    state._store.sneakers = sneakersReducer(state._store.sneakers, action);
+    state._store.filteredSneakers = filteredSneakersReducer(state._store.filteredSneakers, action);
     
-    makeLoginWithGoogle: (userInfo) =>{
+    rerenderEntairTree();
     
-      state.loginedUser.status = "Costumer";
-      state.loginedUser.userName = userInfo.Ad;
-      state.loginedUser.mail =  userInfo.su;
-      state.loginedUser.password = userInfo.NT
-      state.login.changeUserStatus(state.loginedUser.status);
+    if(state._store.changed === true){
+      return true;
     }
   }
 } 

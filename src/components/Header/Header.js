@@ -12,7 +12,7 @@ const Header = (props) => {
   let userStatus = '',
     route = '';
   
-  if(props.state.login.store.loginStatus === 'Admin' || props.state.login.store.loginStatus === 'Costumer'){
+  if(props.state.loginForm.store.loginStatus === 'Admin' || props.state.loginForm.store.loginStatus === 'Costumer'){
     userStatus = Profile;
     route = 'user/main';
   } else {

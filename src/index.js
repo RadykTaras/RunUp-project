@@ -1,5 +1,5 @@
 import React from 'react';
-import state, {stateStatus} from './state';
+import state, {stateStatus} from './redux/state';
 import ReactDOM from 'react-dom/client';
 import App from './components/App';
 

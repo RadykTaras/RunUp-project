@@ -15,7 +15,7 @@ const Store = (props) =>{
         </select>
       </div>
       <div className={style.content}>
-        {props.state.sneakers.map((sneaker) => (
+        {props.state._store.sneakers.map((sneaker) => (
           <div key={sneaker.id} className={style.sneakersCard}>
             <img className={style.sneakers} alt="sneakers" src={require (`${sneaker.mainImgSRC}`)}/>
             <h3 className={style.brand}>

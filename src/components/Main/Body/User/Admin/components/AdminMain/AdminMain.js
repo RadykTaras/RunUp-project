@@ -1,7 +1,7 @@
 import React from "react";
 import style from"../../../User.module.css";
 
-const AdminMain = () =>{
+const AdminMain = (props) =>{
   
   return(
     <>

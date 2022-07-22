@@ -5,16 +5,16 @@ import Costumer from "./Costumer/Costumer";
 
 const User = (props) =>{
 
-  if(props.loginStatus === 'Admin'){
+  if(props.state.loginForm.store.loginStatus === 'Admin'){
     return (
       <>
-       <Admin />
+       <Admin state={props.state}/>
       </>  
     )
   } else {
     return (
       <>
-       <Costumer />
+       <Costumer state={props.state}/>
       </>  
     )
   }

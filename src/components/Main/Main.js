@@ -33,7 +33,7 @@ const Main = (props) => {
               <Route path={loginRoute} element={<Login state={props.state} />} />
               <Route path="register" element={<Register state={props.state} />} />
               <Route path="*" element={<Home />} />
-              <Route path={userRoute} element={<User loginStatus={props.state.loginForm.store.loginStatus}/>} />
+              <Route path={userRoute} element={<User state={props.state}/>} />
               <Route path={changePassRoute} element={<ChangePassword  state={props.state} />} />
           </Routes>
         </div>

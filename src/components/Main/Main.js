@@ -6,17 +6,20 @@ import About from "./Body/About/About";
 import Login from "./Body/Login/Login";
 import Register from "./Body/Register/Register";
 import User from "./Body/User/User";
+import ChangePassword from './Body/ChangePassword/ChangePassword';
 import './Main.css';
 import Aside from './Aside/Aside';
 
 const Main = (props) => {
   
   let userRoute = '',
+    changePassRoute = 'password',
     loginRoute = 'login';
   
   
   if(props.state.loginForm.store.loginStatus){
-    userRoute = 'user/*'
+    userRoute = 'user/*';
+    changePassRoute = 'password';
     loginRoute = '';
   }
   
@@ -32,6 +35,7 @@ const Main = (props) => {
               <Route path="register" element={<Register state={props.state} />} />
               <Route path="*" element={<Home />} />
               <Route path={userRoute} element={<User loginStatus={props.state.loginForm.store.loginStatus}/>} />
+              <Route path={changePassRoute} element={<ChangePassword  state={props.state} />} />
           </Routes>
         </div>
       </main>

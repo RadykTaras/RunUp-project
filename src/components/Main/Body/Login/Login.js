@@ -35,7 +35,9 @@ const Login = (props) =>{
                 }}>
                 LOGIN
               </button>
-            <span className={style.txt}>Forgot Password?</span>
+            <Link to="/password" className={style.txt}>
+              <span className={style.txt}>Forgot Password?</span>
+            </Link>
           </div>
           <div className={style.square}>
             <h6 className={style.squareTxt}>OR</h6>

@@ -731,7 +731,8 @@ let state = {
         'passwordValue': "",
         'errorMessage': "",
         'clientId': "27121478558-kdbcqf6guvfls7dp8omg7atg59lvbrtr.apps.googleusercontent.com",
-        'clientSecret': "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"
+        'clientSecret': "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",
+        'passEmail': ""
       }
     ],
     
@@ -756,6 +757,11 @@ let state = {
     
     updatePassword: (inputPassword) => {
       state.loginForm.store.passwordValue = inputPassword;
+      rerenderEntairTree();
+    },
+    
+    ChangePasswordEmail: (inputPassEmail) => {
+      state.loginForm.store.passEmail = inputPassEmail;
       rerenderEntairTree();
     }
   },

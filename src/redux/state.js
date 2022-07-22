@@ -714,12 +714,18 @@ let state = {
       }
     },
     checkEmailVal : () => {
-      let emailValidationExp = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
-      if(state.registrationForm.store.email.match(emailValidationExp))
-      {
-        return true;
-      }else{
-        state.registrationForm.createErrorMessage('Email is not valid!')
+      for(let i=0; i< state._store.users.length; i++){
+        if(state.registrationForm.store.email === state._store.users[i].mail){
+          let emailValidationExp = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
+          if(state.registrationForm.store.email.match(emailValidationExp))
+          {
+            return true;
+          }else{
+            state.registrationForm.createErrorMessage('Email is not valid!')
+          }
+        } else {
+          state.registrationForm.createErrorMessage('This email is alredy used!')
+        }
       }
     }
   },

@@ -29,23 +29,23 @@ const Header = (props) => {
         </Container>
         <Container className="justify-content-start ss">
           <Nav className="me-auto customNav"> 
-            <LinkContainer className="HomeButton navButton" to="">
+            <LinkContainer className="HomeButton navButton" to="" onClick={() => {props.state.loginForm.cleanFields(); props.state.registrationForm.cleanFields(); }}>
               <Nav.Link>
                 Home
               </Nav.Link>
             </LinkContainer>
-            <LinkContainer className="ShopButton navButton" to="/shop">
+            <LinkContainer className="ShopButton navButton" to="/shop" onClick={() => {props.state.loginForm.cleanFields(); props.state.registrationForm.cleanFields(); }}>
               <Nav.Link>
                 Shop
               </Nav.Link>
             </LinkContainer>
-            <LinkContainer className="AboutButton navButton" to="/about">
+            <LinkContainer className="AboutButton navButton" to="/about" onClick={() => {props.state.loginForm.cleanFields(); props.state.registrationForm.cleanFields(); }}>
               <Nav.Link>
                 About
               </Nav.Link>
             </LinkContainer>
             <Container className="loginLink">
-              <LinkContainer className="loginSvg" to={route}>
+              <LinkContainer className="loginSvg" to={route} onClick={() => {props.state.loginForm.cleanFields(); props.state.registrationForm.cleanFields(); }}>
                 <Nav.Link>
                 <img src={userStatus} alt="login"  />
                 </Nav.Link>

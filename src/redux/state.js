@@ -9,8 +9,6 @@ import loginedUserReducer from "./loginedUser-reducer";
    console.log("State has been changed")
 }
 
-
-
 let state = {
   
   _store: {
@@ -727,6 +725,12 @@ let state = {
           state.registrationForm.createErrorMessage('This email is alredy used!')
         }
       }
+    },
+    cleanFields : () => {
+      for (let val in state.registrationForm.store){
+        state.registrationForm.store[val] = "";
+      }
+      rerenderEntairTree();
     }
   },
   loginForm: {
@@ -776,6 +780,13 @@ let state = {
         state._store.loginedUser[val] = "";
       }
       
+      for (let val in state.loginForm.store){
+        state.loginForm.store[val] = "";
+      }
+      rerenderEntairTree();
+    },
+    
+    cleanFields : () => {
       for (let val in state.loginForm.store){
         state.loginForm.store[val] = "";
       }

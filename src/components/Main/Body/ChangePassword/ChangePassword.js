@@ -21,7 +21,7 @@ const ChangePassword = (props) =>{
             <span className={style.newAccountTxt}>
               Need an account?
             </span>
-            <Link className={style.newAccountLink} to="/register">
+            <Link className={style.newAccountLink} to="/register" onClick={() => {props.state.loginForm.cleanFields()}}>
               SING UP 
             </Link>
           </div>

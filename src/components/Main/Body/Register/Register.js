@@ -33,7 +33,7 @@ const Register = (props) =>{
         <span className={style.newAccountTxt}>
           Already a user?
         </span>
-        <Link className={style.newAccountLink} to="/login">
+        <Link className={style.newAccountLink} to="/login" onClick={() => {props.state.registrationForm.cleanFields()}}>
           LOGIN
         </Link>
       </div>

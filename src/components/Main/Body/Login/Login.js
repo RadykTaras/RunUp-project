@@ -35,7 +35,7 @@ const Login = (props) =>{
                 }}>
                 LOGIN
               </button>
-            <Link to="/password" className={style.txt}>
+            <Link to="/password" className={style.txt} onClick={() => {props.state.loginForm.cleanFields()}}>
               <span className={style.txt}>Forgot Password?</span>
             </Link>
           </div>
@@ -54,7 +54,7 @@ const Login = (props) =>{
             <span className={style.newAccountTxt}>
               Need an account?
             </span>
-            <Link className={style.newAccountLink} to="/register">
+            <Link className={style.newAccountLink} onClick={() => {props.state.loginForm.cleanFields()}} to="/register">
               SING UP 
             </Link>
           </div>

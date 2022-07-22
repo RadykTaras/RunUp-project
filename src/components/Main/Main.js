@@ -16,10 +16,9 @@ const Main = (props) => {
     changePassRoute = 'password',
     loginRoute = 'login';
   
-  
   if(props.state.loginForm.store.loginStatus){
     userRoute = 'user/*';
-    changePassRoute = 'password';
+    changePassRoute = '';
     loginRoute = '';
   }
   

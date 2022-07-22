@@ -8,6 +8,8 @@ const loginedUserReducer = (state, loginForm, action) => {
           state._store.loginedUser.userName = state._store.users[i].userName;
           state._store.loginedUser.mail = state._store.users[i].mail;
           state._store.loginedUser.password = state._store.users[i].password;
+          state._store.loginedUser.userBonus = state._store.users[i].userBonus;
+          state._store.loginedUser.phone = state._store.users[i].phone;
           loginForm.changeUserStatus(state._store.loginedUser.status);
         }
       }

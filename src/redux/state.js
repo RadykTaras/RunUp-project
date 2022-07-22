@@ -18,14 +18,18 @@ let state = {
         "status": "Admin",
         "userName": "Radyk Taras",
         "mail": "radyk.taras.ua@gmail.com",
-        "password": "Skayzer1892"
+        "password": "Skayzer1892",
+        "userBonus": "120",
+        "phone": "+380635188555"
       },
       {
         "id": 2,
         "status": "Costumer",
         "userName": "Liubov Poleschuk",
         "mail": "luibov@gmail.com",
-        "password": "Liubov29"
+        "password": "Liubov29",
+        "userBonus": "120",
+        "phone": "+380635188555"
       }
     ],
     brands: [
@@ -673,7 +677,9 @@ let state = {
       "status": "",
       "userName": "",
       "mail": "",
-      "password": ""
+      "password": "",
+      "userBonus": "",
+      "phone": ""
     },
     changed : "false"
   },

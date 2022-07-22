@@ -21,6 +21,11 @@ const UserAside = (props) => {
                   Profile
                 </Link>
               </li>
+              <li className={style.li}>
+                <Link className='link' to='/' onClick={()=>{props.state.loginForm.loginOut()}}>
+                  Login out
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>

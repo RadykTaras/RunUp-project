@@ -766,10 +766,22 @@ let state = {
       rerenderEntairTree();
     },
     
-    ChangePasswordEmail: (inputPassEmail) => {
+    changePasswordEmail: (inputPassEmail) => {
       state.loginForm.store.passEmail = inputPassEmail;
       rerenderEntairTree();
+    },
+    loginOut: () => {
+      
+      for (let val in state._store.loginedUser){
+        state._store.loginedUser[val] = "";
+      }
+      
+      for (let val in state.loginForm.store){
+        state.loginForm.store[val] = "";
+      }
+      rerenderEntairTree();
     }
+    
   },
   
   dispatch(action){

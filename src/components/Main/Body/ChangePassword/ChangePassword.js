@@ -11,7 +11,7 @@ const ChangePassword = (props) =>{
           <div className={style.formBody}>
             <div className={style.inputContainer}>
               <label className={style.label} htmlFor="email">Email</label>
-              <input className={style.input} value={props.state.loginForm.store.passEmail || ''} type="text" id="email" onChange={(e) => {props.state.loginForm.ChangePasswordEmail(e.target.value)}}/>
+              <input className={style.input} value={props.state.loginForm.store.passEmail || ''} type="text" id="email" onChange={(e) => {props.state.loginForm.changePasswordEmail(e.target.value)}}/>
             </div>
             <button className={style.button} onClick={() => {}}>
               Change password

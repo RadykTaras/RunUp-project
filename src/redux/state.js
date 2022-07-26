@@ -24,7 +24,7 @@ let state = {
       },
       {
         "id": 2,
-        "status": "Costumer",
+        "status": "Custumer",
         "userName": "Liubov Poleschuk",
         "mail": "luibov@gmail.com",
         "password": "Liubov29",
@@ -106,7 +106,7 @@ let state = {
       }
     ],
     sneakers: [
-      {
+       {
         "id": 1,
         "brand": "Adidas",
         "mainImgSRC": "./img/Adidas/man/1 1.jpg",
@@ -671,6 +671,18 @@ let state = {
       }
     ],
     filteredSneakers: [
+      {
+        "id": 1,
+        "brand": "Adidas",
+        "mainImgSRC": "./img/Adidas/man/1 1.jpg",
+        "pictures": "./img/Adidas/man/1 2.jpg ./img/Adidas/man/1 3.jpg ./img/Adidas/man/1 4.jpg",
+        "sex": "Man",
+        "model": "RunBoost",
+        "sizes": "9, 9.5, 10.5, 11",
+        "colors": "maroon lightgray",
+        "price": 120
+      }
+       
       
     ],
     loginedUser: {
@@ -720,15 +732,17 @@ let state = {
     checkEmailVal : () => {
       for(let i=0; i< state._store.users.length; i++){
         if(state.registrationForm.store.email === state._store.users[i].mail){
+          
+          state.registrationForm.createErrorMessage('This email is alredy used!');
+          
+        } else {
           let emailValidationExp = /^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/;
           if(state.registrationForm.store.email.match(emailValidationExp))
           {
             return true;
-          }else{
+          } else {
             state.registrationForm.createErrorMessage('Email is not valid!')
           }
-        } else {
-          state.registrationForm.createErrorMessage('This email is alredy used!')
         }
       }
     },
@@ -807,7 +821,7 @@ let state = {
     state._store.loginedUser = loginedUserReducer(state, state.loginForm, action);
     state._store.brands = brandsReducer(state._store.brands, action,);
     state._store.sneakers = sneakersReducer(state._store.sneakers, action);
-    state._store.filteredSneakers = filteredSneakersReducer(state._store.filteredSneakers, action);
+    state._store.filteredSneakers = filteredSneakersReducer(state, action);
     
     rerenderEntairTree();
     

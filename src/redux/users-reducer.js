@@ -16,6 +16,7 @@ const UsersReducer = (state, registrationForm, action) => {
         state._store.changed = true;
       } else {
         registrationForm.createErrorMessage('Passwords do not match!')
+        state._store.changed = false;
       }
       
     }

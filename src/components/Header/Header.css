@@ -39,7 +39,7 @@
   25% {fill: rgb(56, 230, 62); color: rgb(56, 230, 62)}
   35% {fill: rgb(0, 245, 172); color: rgb(0, 245, 172)}
   50% {fill: yellow; color: yellow}
-  75% {fill: blue; color: blue}
+  75% {fill: rgb(0, 247, 255); color: rgb(0, 225, 255)}
 }
 
 .logo_container{

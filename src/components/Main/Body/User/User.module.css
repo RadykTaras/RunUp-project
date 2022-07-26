@@ -27,6 +27,7 @@
 .Container{
   justify-content: space-between;
   display: flex;
+  position: relative;
   align-items: center;
   margin-top: 20px;
 }
@@ -110,4 +111,16 @@
 }
 .inputFile:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+
+.editInput{
+  position: absolute;
+  width: 222px;
+  border-radius: 8px;
+  right: 0px;
+  font-weight: 600;
+}
+
+.editInputHiden{
+  display: none;
 }

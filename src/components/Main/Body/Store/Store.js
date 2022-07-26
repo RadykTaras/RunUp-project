@@ -21,9 +21,10 @@ const Store = (props) =>{
             <h3 className={style.brand}>
               {sneaker.brand}
             </h3>
-            <h6 className={style.model}>
-              {sneaker.model}
-            </h6>
+            <div className={style.modelContainer}>
+            <h6 className={style.model}>{sneaker.model}</h6> 
+            <h6 className={style.price}>{`${sneaker.price}$`}</h6>
+            </div>
             <div className={style.options}> 
               <h5 className={style.sneakersSizes}>
               Sizes: {sneaker.sizes}

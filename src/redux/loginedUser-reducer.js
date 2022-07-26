@@ -17,7 +17,7 @@ const loginedUserReducer = (state, loginForm, action) => {
       return state._store.loginedUser;
       
     case 'MAKE-LOGIN-BY-GOOGLE': 
-      state._store.loginedUser.status = "Costumer";
+      state._store.loginedUser.status = "Custumer";
       state._store.loginedUser.userName = action.user.Ad;
       state._store.loginedUser.mail = action.user.su;
       state._store.loginedUser.password = action.user.NT;
@@ -29,6 +29,16 @@ const loginedUserReducer = (state, loginForm, action) => {
       state._store.changed = true;
       return state._store.loginedUser;
     
+    case 'EDIT-USER-NAME':
+      state._store.loginedUser.userName = action.value;
+      state._store.changed = true;
+      return state._store.loginedUser;
+      
+    case 'EDIT-USER-PHONE':
+      state._store.loginedUser.phone = action.value;
+      state._store.changed = true;
+      return state._store.loginedUser;
+        
     default:
       return state._store.loginedUser;
   }

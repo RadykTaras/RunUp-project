@@ -12,17 +12,29 @@ const Register = (props) =>{
       <div className={style.formBody}>
         <div className={style.inputContainer}>
           <label className={style.label} htmlFor="email">Email</label>
-          <input className={style.input} value={props.state.registrationForm.store.email || ''} type="text" id="email"  onChange={(e) => {props.state.registrationForm.updateEmail(e.target.value)}}/>
+          <input className={style.input} 
+            value={props.state.registrationForm.store.email || ''} 
+            type="text" id="email"  
+            onChange={(e) => {props.state.registrationForm.updateEmail(e.target.value)}}
+          />
         </div>
         <div className={style.inputContainer}>
           <label className={style.label} htmlFor="password">Password</label>
-          <input className={style.input} value={props.state.registrationForm.store.password || ''} type="password"  id="password" onChange={(e) => {props.state.registrationForm.updatePassword(e.target.value)}}/>
+          <input className={style.input} 
+            value={props.state.registrationForm.store.password || ''} 
+            type="password"  id="password"
+            onChange={(e) => {props.state.registrationForm.updatePassword(e.target.value)}}
+          />
         </div>
         <div className={style.inputContainer}>
           <label className={style.label} htmlFor="password">Reapet password</label>
           <input className={style.input} value={props.state.registrationForm.store.reapetPassword || ''} type="password"  id="password" onChange={(e) => {props.state.registrationForm.updateReapetedPassword(e.target.value)}}/>
         </div>
-        <button className={style.button} onClick={() => {if(props.state.dispatch({type : "MAKE-REGISTRATION"})) {location.pathname = '/login'}}}>
+        <button className={style.button} 
+          onClick={() => {
+            if(props.state.dispatch({type : "MAKE-REGISTRATION"})) 
+            {location.pathname = '/login'}}}
+        >
           SIGN UP
         </button>
       </div>

@@ -29,23 +29,44 @@ const Header = (props) => {
         </Container>
         <Container className="justify-content-start ss">
           <Nav className="me-auto customNav"> 
-            <LinkContainer className="HomeButton navButton" to="" onClick={() => {if(!props.state.loginForm.store.loginStatus){props.state.loginForm.cleanFields(); props.state.registrationForm.cleanFields(); }}}>
+            <LinkContainer className="HomeButton navButton" to="" onClick={() => {
+              if(!props.state.loginForm.store.loginStatus)
+              {
+                props.state.loginForm.cleanFields(); 
+                props.state.registrationForm.cleanFields(); 
+              }}}>
               <Nav.Link>
                 Home
               </Nav.Link>
             </LinkContainer>
-            <LinkContainer className="ShopButton navButton" to="/shop" onClick={() => {if(!props.state.loginForm.store.loginStatus){props.state.loginForm.cleanFields(); props.state.registrationForm.cleanFields(); }}}>
+            <LinkContainer className="ShopButton navButton" to="/shop" onClick={() => {
+              if(!props.state.loginForm.store.loginStatus)
+              {
+                props.state.loginForm.cleanFields(); 
+                props.state.registrationForm.cleanFields(); 
+                props.state.dispatch({type: "FILTER-SNEAKERS"});
+              }}}>
               <Nav.Link>
                 Shop
               </Nav.Link>
             </LinkContainer>
-            <LinkContainer className="AboutButton navButton" to="/about" onClick={() => {if(!props.state.loginForm.store.loginStatus){props.state.loginForm.cleanFields(); props.state.registrationForm.cleanFields(); }}}>
+            <LinkContainer className="AboutButton navButton" to="/about" onClick={() => {
+              if(!props.state.loginForm.store.loginStatus)
+              {
+                props.state.loginForm.cleanFields(); 
+                props.state.registrationForm.cleanFields(); 
+              }}}>
               <Nav.Link>
                 About
               </Nav.Link>
             </LinkContainer>
             <Container className="loginLink">
-              <LinkContainer className="loginSvg" to={route} onClick={() => {if(!props.state.loginForm.store.loginStatus){props.state.loginForm.cleanFields(); props.state.registrationForm.cleanFields(); }}}>
+              <LinkContainer className="loginSvg" to={route} onClick={() => {
+                if(!props.state.loginForm.store.loginStatus)
+                {
+                  props.state.loginForm.cleanFields(); 
+                  props.state.registrationForm.cleanFields(); 
+                }}}>
                 <Nav.Link>
                 <img src={userStatus} alt="login"  />
                 </Nav.Link>

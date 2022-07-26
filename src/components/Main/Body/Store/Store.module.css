@@ -18,6 +18,7 @@
 .sneakersCard{
   padding-left: 10px;
   margin: 5px 5px;
+  padding-right: 10px;
   background-color: #ECEEF0;
   box-shadow: 1px 2px 2px rgb(190, 190, 190);
 }
@@ -41,17 +42,27 @@
   margin-bottom: 0px;
 }
 
-.model{
+.modelContainer{
   font-family:'Lucida Handwriting';
-  font-weight: 600;
   font-style: italic;
   color: rgb(143, 143, 143);
+  display: flex;
+  justify-content: space-between;
+}
+
+.model, .price{
+  font-weight: 600;
+}
+
+.model:hover, .price:hover{
+  color: rgb(0, 192, 230);
 }
 
 .sneakersSizes{
   color: rgb(143, 143, 143);
   max-width: 250px;
   margin-right: 10%;
+  font-size: 20px;
 }
 
 .sortContainer{

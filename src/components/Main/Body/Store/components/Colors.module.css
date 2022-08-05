@@ -1,6 +1,10 @@
 .colorsContainer{
   width: 24px;
   height: 25px;
+  max-width: 24px;
+  max-height: 25px;
+  min-width: 24px;
+  min-height: 25px;
   border: 0.4px solid #aaa;
   border-radius: 12px;
   margin-right: 10px;

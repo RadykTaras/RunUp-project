@@ -15,11 +15,12 @@ export const FilteredSneakersReducer = (state, action) => {
         state._store.filteredSneakers.price = state._store.sneakers[i].price;
         
       }
-      console.log(state._store.filteredSneakers);
-      console.log(state._store.sneakers);
+
       state._store.changed = true;
       return state._store.filteredSneakers;
-        
+       
+      
+      
     default:
       return state._store.filteredSneakers;
   }

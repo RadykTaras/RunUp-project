@@ -1,30 +1,18 @@
-import React, { useState } from 'react';
 import style from './PriceList.module.css'
+import React, {useState} from 'react';
 
 const PriceList = (props) => {
   
-  let newArr = [],
-    priceInterval = 10;
+  let priceInterval = 10;
   
-  for (let i = 0; i < props.state.length; i++){
-    newArr.push(props.state[i].price);
-  }
   
-  let minPrice = Math.min.apply(null, newArr),
-    maxPrice = Math.max.apply(null, newArr);
-  
-  let [minValue, setMinValue] = useState(minPrice);  
-  let [maxValue, setMaxValue] = useState(maxPrice);  
-  
-  if(maxValue-minValue < priceInterval){
-    setMinValue(maxValue-priceInterval);
+  if(props.maxValue-props.minValue < priceInterval){
+    props.setMinValue(props.maxValue-priceInterval);
   } 
   else {
-    
-    document.documentElement.style.setProperty('--minSize', `${((minValue - minPrice)/((maxPrice - minPrice) / 100))}%`);
-    document.documentElement.style.setProperty('--maxSize', `${100-((maxValue - minPrice)/((maxPrice - minPrice) / 100))}%`);
+    document.documentElement.style.setProperty('--minSize', `${((props.minValue - props.minPrice)/((props.maxPrice - props.minPrice) / 100))}%`);
+    document.documentElement.style.setProperty('--maxSize', `${100-((props.maxValue - props.minPrice)/((props.maxPrice - props.minPrice) / 100))}%`);
   }
-  
   
   return (
     <div>
@@ -33,35 +21,37 @@ const PriceList = (props) => {
           <span>
             Min
           </span>
-          <input type="number" className={style.inputMin} value={minValue} readOnly/>
+          <input type="number" className={style.inputMin} value={props.minValue} readOnly/>
         </div>
         <div className={style.separator}>-</div>
         <div className={style.field}>
           <span>
             Max
           </span>
-          <input type="number" className={style.inputMax} value={maxValue} readOnly/>
+          <input type="number" className={style.inputMax} value={props.maxValue} readOnly/>
         </div>
       </div>
       <div className={style.slider}>
         <div className={style.progress} />
       </div>
       <div className={style.rangeInput}>
-        <input type="range" name="min" className={style.rangeMin} min={minPrice} max={maxPrice} defaultValue={minPrice} onChange={(event) => {
-          if(event.target.value > maxValue - priceInterval)
+        <input type="range" name="min" className={style.rangeMin} min={props.minPrice} max={props.maxPrice} defaultValue={props.minPrice} onChange={(event) => {
+          if(event.target.value > props.maxValue - priceInterval)
           {
-            event.target.value = minValue
+            event.target.value = props.minValue
           }else{
-            setMinValue(event.target.value)
+            props.setMinValue(event.target.value);
+            props.state.filter.getFilteredBrands(props.minValue, props.maxValue);
           }
           }}
         />
-        <input type="range" name="max" className={style.rangeMax} min={minPrice} max={maxPrice} defaultValue={maxPrice} onChange={(event) => {
-          if(event.target.value < parseInt(minValue) + priceInterval)
+        <input type="range" name="max" className={style.rangeMax} min={props.minPrice} max={props.maxPrice} defaultValue={props.maxPrice} onChange={(event) => {
+          if(event.target.value < parseInt(props.minValue) + priceInterval)
           {
-            event.target.value = maxValue
+            event.target.value = props.maxValue
           }else{
-            setMaxValue(event.target.value)
+            props.setMaxValue(event.target.value);
+            props.state.filter.getFilteredBrands(props.minValue, props.maxValue);
           }
           }}
         />

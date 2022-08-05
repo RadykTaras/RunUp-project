@@ -45,6 +45,7 @@ const Header = (props) => {
                 props.state.loginForm.cleanFields(); 
                 props.state.registrationForm.cleanFields(); 
                 props.state.dispatch({type: "FILTER-SNEAKERS"});
+                
               }}}>
               <Nav.Link>
                 Shop

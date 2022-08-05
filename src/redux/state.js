@@ -115,7 +115,8 @@ let state = {
         "model": "RunBoost",
         "sizes": "9, 9.5, 10.5, 11",
         "colors": "maroon lightgray",
-        "price": 120
+        "price": 120,
+        "likes": 0
       },
       
       {
@@ -127,7 +128,8 @@ let state = {
         "model": "RunBoost2",
         "sizes": "9.5, 10, 10.5",
         "colors": "lightgray black",
-        "price": 140
+        "price": 140,
+        "likes": 0
       },
       
       {
@@ -139,7 +141,8 @@ let state = {
         "model": "Speed3",
         "sizes": "10, 10.5, 11",
         "colors": "black",
-        "price": 90
+        "price": 90,
+        "likes": 0
       },
       
       {
@@ -151,7 +154,8 @@ let state = {
         "model": "Snike2",
         "sizes": "6.5, 7, 8",
         "colors": "wite black yellow",
-        "price": 120
+        "price": 120,
+        "likes": 0
       },
       
       {
@@ -163,7 +167,8 @@ let state = {
         "model": "RunBoost",
         "sizes": "7, 7.5",
         "colors": "MistyRose",
-        "price": 75
+        "price": 75,
+        "likes": 0
       },
       
       {
@@ -175,7 +180,8 @@ let state = {
         "model": "Blast XX",
         "sizes": "6, 7, 8",
         "colors": "MistyRose lightgreen",
-        "price": 120
+        "price": 120,
+        "likes": 0
       },
       
       {
@@ -187,7 +193,8 @@ let state = {
         "model": "Shtorm",
         "sizes": "7.5, 8, 8.5",
         "colors": "dodgerblue gold",
-        "price": 110
+        "price": 110,
+        "likes": 0
       },
       
       {
@@ -199,7 +206,8 @@ let state = {
         "model": "Boost 3",
         "sizes": "9, 9.5, 10",
         "colors": "sandybrown",
-        "price": 155
+        "price": 155,
+        "likes": 0
       },
       
       {
@@ -211,7 +219,8 @@ let state = {
         "model": "Enegry",
         "sizes": "10.5, 11",
         "colors": "orange cyan",
-        "price": 120
+        "price": 120,
+        "likes": 0
       },
       
       {
@@ -223,7 +232,8 @@ let state = {
         "model": "Swift+",
         "sizes": "10, 10.5",
         "colors": "powderblue lime black",
-        "price": 85
+        "price": 85,
+        "likes": 0
       },
       
       {
@@ -235,7 +245,8 @@ let state = {
         "model": "Octopus",
         "sizes": "6.5, 7, 7.5",
         "colors": "Turquoise",
-        "price": 80
+        "price": 80,
+        "likes": 0
       },
       
       {
@@ -247,7 +258,8 @@ let state = {
         "model": "Speedy cherry",
         "sizes": "7, 7.5, 8",
         "colors": "DarkRed gray",
-        "price": 90
+        "price": 90,
+        "likes": 0
       },
       
       {
@@ -259,7 +271,8 @@ let state = {
         "model": "Gel +",
         "sizes": "7, 7.5, 8",
         "colors": "statetle yellow",
-        "price": 115
+        "price": 115,
+        "likes": 0
       },
       
       {
@@ -271,7 +284,8 @@ let state = {
         "model": "Boost +",
         "sizes": "8.5, 9, 9.5, 10, 10.5",
         "colors": "black blue red",
-        "price": 124
+        "price": 124,
+        "likes": 0
       },
       
       {
@@ -283,7 +297,8 @@ let state = {
         "model": "Boost v2",
         "sizes": "8.5, 9",
         "colors": "blue red",
-        "price": 140
+        "price": 140,
+        "likes": 0
       },
       
       {
@@ -295,7 +310,8 @@ let state = {
         "model": "light gel",
         "sizes": "8.5, 9, 10, 11",
         "colors": "orange gray",
-        "price": 155
+        "price": 155,
+        "likes": 0
       },
       
       {
@@ -307,7 +323,8 @@ let state = {
         "model": "Atlet",
         "sizes": "8.5, 9, 10, 10.5",
         "colors": "gray orange show",
-        "price": 120
+        "price": 120,
+        "likes": 0
       },
       
       {
@@ -319,7 +336,8 @@ let state = {
         "model": "Runn k2",
         "sizes": "6, 6.5, 7.5",
         "colors": "black blue",
-        "price": 64
+        "price": 64,
+        "likes": 0
       },
       
       {
@@ -331,7 +349,8 @@ let state = {
         "model": "strange",
         "sizes": "6, 7, 7.5",
         "colors": "white gray",
-        "price": 75
+        "price": 75,
+        "likes": 0
       },
       
       {
@@ -343,7 +362,8 @@ let state = {
         "model": "boost pro",
         "sizes": "6, 6.5, 7.5, 8",
         "colors": "LightCyan ligjtblue",
-        "price": 100
+        "price": 100,
+        "likes": 0
       },
       
       {
@@ -355,7 +375,8 @@ let state = {
         "model": "street Run",
         "sizes": "8.5, 9, 9.5, 10, 10.5",
         "colors": "gray black olive",
-        "price": 124
+        "price": 124,
+        "likes": 0
       },
       
       {
@@ -367,7 +388,8 @@ let state = {
         "model": "Skit 2",
         "sizes": "8.5, 9, 10, 10.5, 11",
         "colors": "black",
-        "price": 110
+        "price": 110,
+        "likes": 0
       },
       
       {
@@ -379,7 +401,8 @@ let state = {
         "model": "Evolution v1 boost",
         "sizes": "8.5, 9, 10, 10.5, 11",
         "colors": "olive darkgreen gray",
-        "price": 95
+        "price": 95,
+        "likes": 0
       },
       
       {
@@ -391,7 +414,8 @@ let state = {
         "model": "Evolution v2 boost",
         "sizes": " 9, 9.5, 10, 10.5, 11",
         "colors": "gray olive",
-        "price": 120
+        "price": 120,
+        "likes": 0
       },
       
       {
@@ -403,7 +427,8 @@ let state = {
         "model": "Step swift",
         "sizes": "6, 6.5, 7.5, 8, 8.5",
         "colors": "purple gray",
-        "price": 130
+        "price": 130,
+        "likes": 0
       },
       
       {
@@ -415,7 +440,8 @@ let state = {
         "model": "Sand step",
         "sizes": "6, 7, 8",
         "colors": "cyan yellow",
-        "price": 120
+        "price": 120,
+        "likes": 0
       },
       
       {
@@ -427,7 +453,8 @@ let state = {
         "model": "Boosty v7",
         "sizes": "6, 7.5, 8, 8.5",
         "colors": "cyan pink",
-        "price": 95
+        "price": 95,
+        "likes": 0
       },
       
       {
@@ -439,7 +466,8 @@ let state = {
         "model": "Cross limited+",
         "sizes": "15, 16, 16.",
         "colors": "black",
-        "price": 140
+        "price": 140,
+        "likes": 0
       },
       
       {
@@ -451,7 +479,8 @@ let state = {
         "model": "Enegry elit",
         "sizes": "8.5, 9, 9.5, 10, 10.5, 11",
         "colors": "white red",
-        "price": 130
+        "price": 130,
+        "likes": 0
       },
       
       {
@@ -463,7 +492,8 @@ let state = {
         "model": "Fly pro",
         "sizes": "8.5, 9, 10, 10.5, 11",
         "colors": "white black",
-        "price": 140
+        "price": 140,
+        "likes": 0
       },
       
       {
@@ -475,7 +505,8 @@ let state = {
         "model": "free step",
         "sizes": "8.5, 9, 10, 10.5, 11",
         "colors": "sand black",
-        "price": 100
+        "price": 100,
+        "likes": 0
       },
       
       {
@@ -487,7 +518,8 @@ let state = {
         "model": "Extreme pro Max",
         "sizes": "8.5, 9, 10, 10.5, 11, 11.5",
         "colors": "blue orange",
-        "price": 160
+        "price": 160,
+        "likes": 0
       },
       
       {
@@ -499,7 +531,8 @@ let state = {
         "model": "Marapone S",
         "sizes": "8.5, 9, 10, 10.5, 11",
         "colors": "gray lightblue",
-        "price": 130
+        "price": 130,
+        "likes": 0
       },
       
       {
@@ -511,7 +544,8 @@ let state = {
         "model": "Split",
         "sizes": "5, 6, 6.5, 7, 7.5",
         "colors": "orange pink",
-        "price": 140
+        "price": 140,
+        "likes": 0
       },
       
       {
@@ -523,7 +557,8 @@ let state = {
         "model": "Street road",
         "sizes": "6, 6.5, 7, 7.5",
         "colors": "Bisque lightgreen",
-        "price": 170
+        "price": 170,
+        "likes": 0
       },
       
       {
@@ -535,7 +570,8 @@ let state = {
         "model": "Gel boost2",
         "sizes": "6, 6.5, 7, 7.5, 8",
         "colors": "LightSalmon lightblue",
-        "price": 180
+        "price": 180,
+        "likes": 0
       },
       
       {
@@ -547,7 +583,8 @@ let state = {
         "model": "Road dream",
         "sizes": "8.5, 9, 9.5, 10, 10.5, 11",
         "colors": "BurlyWood",
-        "price": 200
+        "price": 200,
+        "likes": 0
       },
       
       {
@@ -559,7 +596,8 @@ let state = {
         "model": "SpeedRun",
         "sizes": "8.5, 9, 9.5, 10, 10.5",
         "colors": "orange blue black",
-        "price": 210
+        "price": 210,
+        "likes": 0
       },
       
       {
@@ -571,7 +609,8 @@ let state = {
         "model": "Light form 2",
         "sizes": "8.5, 9, 9.5, 10, 10.5",
         "colors": "black white",
-        "price": 190
+        "price": 190,
+        "likes": 0
       },
       
       {
@@ -583,7 +622,8 @@ let state = {
         "model": "Statick",
         "sizes": "5, 6, 6.5, 7",
         "colors": "white pink",
-        "price": 120
+        "price": 120,
+        "likes": 0
       },
       
       {
@@ -595,7 +635,8 @@ let state = {
         "model": "Escape",
         "sizes": "5, 6, 6.5, 7",
         "colors": "black",
-        "price": 90
+        "price": 90,
+        "likes": 0
       },
       
       {
@@ -607,7 +648,8 @@ let state = {
         "model": "Speed step",
         "sizes": "8.5, 9, 9.5, 10, 10.5, 11",
         "colors": "darkblue black blue",
-        "price": 124
+        "price": 124,
+        "likes": 0
       },
       
       {
@@ -619,7 +661,8 @@ let state = {
         "model": "Elastick",
         "sizes": "9.5, 10, 10.5, 11",
         "colors": "darkcyan white black",
-        "price": 100
+        "price": 100,
+        "likes": 0
       },
       
       {
@@ -631,7 +674,8 @@ let state = {
         "model": "Sticky blick",
         "sizes": "8.5, 9.5, 10, 10.5, 11",
         "colors": "black blue",
-        "price": 130
+        "price": 130,
+        "likes": 0
       },
       
       {
@@ -643,7 +687,8 @@ let state = {
         "model": "Str 2",
         "sizes": "5, 6, 6.5, 7, 7.5",
         "colors": "lightpink",
-        "price": 80
+        "price": 80,
+        "likes": 0
       },
       
       {
@@ -655,7 +700,8 @@ let state = {
         "model": "spider",
         "sizes": "5, 6, 6.5, 7, 8",
         "colors": "darkcyan",
-        "price": 90
+        "price": 90,
+        "likes": 0
       },
       
       {
@@ -667,23 +713,13 @@ let state = {
         "model": "Endo",
         "sizes": "9.5, 10, 10.5, 11",
         "colors": "Yellow red",
-        "price": 90
+        "price": 90,
+        "likes": 0
       }
     ],
-    filteredSneakers: [
-      {
-        "id": 1,
-        "brand": "Adidas",
-        "mainImgSRC": "./img/Adidas/man/1 1.jpg",
-        "pictures": "./img/Adidas/man/1 2.jpg ./img/Adidas/man/1 3.jpg ./img/Adidas/man/1 4.jpg",
-        "sex": "Man",
-        "model": "RunBoost",
-        "sizes": "9, 9.5, 10.5, 11",
-        "colors": "maroon lightgray",
-        "price": 120
-      }
-       
-      
+    filteredSneakers: [       
+      0,
+      1000
     ],
     loginedUser: {
       "status": "",
@@ -813,6 +849,38 @@ let state = {
       rerenderEntairTree();
     }
     
+  },
+  filter:{
+    getFilteredBrands : (value, value2) =>{
+      if(value2){
+        state._store.filteredSneakers[0]=parseInt(value);
+        state._store.filteredSneakers[1]=parseInt(value2);
+      } else
+      if(state._store.filteredSneakers.indexOf(value)> -1){
+        
+        const index = state._store.filteredSneakers.indexOf(value);
+        state._store.filteredSneakers.splice(index,1);
+      }
+      else {
+        state._store.filteredSneakers.push(value);
+      }
+     
+      rerenderEntairTree();
+    },
+    filteredPrice:[
+     
+    ],
+    setFilterPrice: (value) =>{
+      if(state.filter.filteredPrice.indexOf(value)> -1){
+        
+        const index = state.filter.filteredPrice.indexOf(value);
+        
+      }
+      else {
+        state.filter.filteredPrice.push(value);
+      }
+      
+    }
   },
   
   dispatch(action){

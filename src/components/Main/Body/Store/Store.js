@@ -1,12 +1,15 @@
 import React, {useState} from "react";
 import style from "./Store.module.css";
 import Colors from "./components/Colors";
+import heart from "./img/heart.svg";
+import heartLiked from "./img/heart-like.svg";
+import {ReactComponent as ShopCart} from './img/shopCart.svg';
 
 const Store = (props) =>{
   
   let [sortParam, setsortParam] = useState(0);  
   
-  
+  let [heartIcon, setheartIcon] = useState(heart);
   
   function getFiler (value){
     
@@ -47,6 +50,10 @@ const Store = (props) =>{
               Sizes: {sneaker.sizes}
               </h5>
               {sneaker.colors.split(' ').map((color) => (<Colors key={color+sneaker.id} color={color}/>))}
+            </div>
+            <div className={style.iconsContainer} >
+              <ShopCart />
+              <img className={style.heartIcon} src={heartIcon} alt="heart" onClick={(event) => { if(heartIcon === heart ){event.target.src = heartLiked; heartIcon = heartLiked} else{event.target.src = heart; heartIcon = heart}}}/>
             </div>
           </div>
           ))
